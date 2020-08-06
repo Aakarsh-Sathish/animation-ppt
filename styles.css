@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Acme',
+        sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+:root {
+    --page-1-color: steelblue;
+    --page-2-color: tan;
+    --page-4-color: slateblue;
+    --page-3-color: teal;
+    --animate-speed: 2s;
+}
+
+
+.comm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20%;
+}
+
+h1 {
+    font-size: 3rem;
+    padding-bottom: 30px;
+    font-family: 'Acme',
+        sans-serif;
+    color: white;
+}
+
+p {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+#page-1 {
+    background-color: var(--page-1-color);
+}
+
+#page-2 {
+    background-color: var(--page-2-color);
+}
+
+#page-3 {
+    background-color: var(--page-3-color);
+}
+
+#page-4 {
+    background-color: var(--page-4-color);
+}
+
+.content {
+    margin: 10px 0px 20px 0px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 1rem, 0;
+    padding: 1rem 2rem;
+    background: #f4f4f4;
+    text-decoration: none;
+    color: #333;
+    border-top: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in;
+
+}
+
+.btn:hover,
+.btn-dark {
+    color: white;
+    background-color: #333;
+}
+
+.btn-dark:hover {
+    color: #333;
+    background-color: white;
+}
+
+
+#page-1 h1 {
+    transform: translateY(-1200px);
+    animation: heading var(--animate-speed) forwards ease-in;
+}
+
+#page-1 p {
+    transform: translateX(-1200px);
+    animation: paragraph var(--animate-speed) forwards ease-in 2s;
+}
+
+@keyframes heading {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes paragraph {
+    to {
+        transform: translateX(0);
+    }
+}
